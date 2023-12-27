@@ -3,7 +3,8 @@ import java.util.*;
 import java.time.LocalDate;
 
 public class Book {
-    private int id;
+    
+    private String id;
     private String isbn;
     private String title;
     private String author;
@@ -12,12 +13,17 @@ public class Book {
 
 
 
-    public Book(int id) {
-        this.id = id;
-        this.isbn = isbn;
-        this.title = title;
-        this.author = author;
-        this.leaseStartDate;
-        this.leaseEndDate = leaseStartDate.plusWeeks(2);
-    }
+public Book(String isbn, String title, String author, LocalDate leaseStartDate) {
+
+    this.id = UUID.randomUUID().toString();
+    this.isbn = isbn;
+    this.title = title;
+    this.author = author;
+    this.leaseStartDate;
+    this.leaseEndDate = leaseStartDate.plusWeeks(2);
+}
+
+public static void main (String[] args) {
+    List<Book> books = new ArrayList<>();
+}
 }
