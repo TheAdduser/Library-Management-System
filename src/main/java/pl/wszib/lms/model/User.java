@@ -1,4 +1,4 @@
-package pl.wszib.lms;
+package pl.wszib.lms.model;
 
 public class User {
     private String login;

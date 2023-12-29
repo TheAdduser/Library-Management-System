@@ -1,4 +1,4 @@
-package pl.wszib.lms;
+package pl.wszib.lms.model;
 import java.util.*;
 import java.time.LocalDate;
 
