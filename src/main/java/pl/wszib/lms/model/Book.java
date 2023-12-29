@@ -23,7 +23,4 @@ public Book(String isbn, String title, String author, LocalDate leaseStartDate) 
     this.leaseEndDate = leaseStartDate.plusWeeks(2);
 }
 
-public static void main (String[] args) {
-    List<Book> books = new ArrayList<>();
-}
 }
