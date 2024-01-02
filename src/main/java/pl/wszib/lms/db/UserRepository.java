@@ -11,9 +11,9 @@ public class UserRepository {
 
         public UserRepository() {
         this.users.put("admin",
-                new User("admin", "362706cff716326a8a8317c9c5bd47f9", "ADMIN"));
+                new User("admin", "e405124f1a3d0c1c484fe647049d610b", "ADMIN"));
         this.users.put("janusz",
-                new User("janusz", "5550b60e1d08b7c2e88d146c0721de00", "USER"));
+                new User("janusz", "2d49da78fb7b2262df493c07d3a1737f", "USER"));
     }
 
     public User getByLogin(String login) {
