@@ -36,4 +36,4 @@ public class GUI {
         return new User(login, scanner.nextLine());
     }
 }
-}
+
