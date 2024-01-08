@@ -15,4 +15,10 @@ public class GUI {
         System.out.println("4. Exit");
         return scanner.nextLine();
     }
+    public static void listBooks(Book[] books) {
+    for (Book book : books) {
+        System.out.println(book);
+        }
+    }
+
 }
