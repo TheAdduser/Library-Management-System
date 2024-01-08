@@ -21,4 +21,11 @@ public class GUI {
         }
     }
 
+    public static void showResult(boolean result) {
+        if(result) {
+            System.out.println("Success !!");
+        } else {
+            System.out.println("Error !!");
+        }
+    }
 }
