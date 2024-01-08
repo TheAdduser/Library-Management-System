@@ -18,4 +18,8 @@ public class BookRepository {
         this.books[8] = new Book("9788324014251", "Nad Niemnem", "Eliza Orzeszkowa");
         this.books[9] = new Book("9788380108574", "Solaris", "Stanisław Lem");
     }
+
+    public Book[] getBooks()    {
+        return books;
+    }
 }
