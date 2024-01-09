@@ -8,17 +8,30 @@ public class Book {
     private String author;
     private LocalDate leaseStartDate;
     private LocalDate leaseEndDate;
-
-
+    private boolean leaseStatus;
+    private String bookInfo;
 
 public Book(String isbn, String title, String author) {
 
     this.isbn = isbn;
     this.title = title;
     this.author = author;
-    this.rentStatus = false;
+    this.leaseStatus = false;
 
 }
+public Book(String isbn, String title, String author, LocalDate leaseStartDate,
+    LocalDate leaseEndDate, boolean leaseStatus, String bookInfo){
+        
+        this.isbn = isbn;
+        this.title = title;
+        this.author = author;
+        this.startDate = leaseStartDate;
+        this.endDate = leaseEndDate;
+        this.leaseStatus = leaseStatus;
+        this.bookInfo = bookInfo;
+
+
+    }
     public String getIsbn() {
         return isbn;
     }

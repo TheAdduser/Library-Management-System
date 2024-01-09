@@ -23,10 +23,10 @@ public class App {
                     GUI.listBooks(bookRepository.getBooks());
                     break;
                 case "2":
-                    System.out.println("Listing all rented books: ");
+                    System.out.println("Listing all leased books: ");
                     break;
                 case "3":
-                    System.out.println("Which book do you want to rent?: ");
+                    System.out.println("Which book do you want to lease?: ");
                     break;
                 case "4":
                     System.out.println("Which book are you looking for?: ");

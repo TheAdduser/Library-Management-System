@@ -10,8 +10,8 @@ public class GUI {
     private final static Scanner scanner = new Scanner(System.in);
     public static String showMenuAndReadChoose() {
         System.out.println("1. List all books");
-        System.out.println("2. List rented book");
-        System.out.println("3. Rent book");
+        System.out.println("2. List leased book");
+        System.out.println("3. Lease book");
         System.out.println("4. Search book");
         System.out.println("5. Add book");
         System.out.println("6. Exit");
@@ -19,7 +19,7 @@ public class GUI {
 
         return scanner.nextLine();
     }
-    
+
     public static void listBooks(Book[] books) {
     for (Book book : books) {
         System.out.println(book);
