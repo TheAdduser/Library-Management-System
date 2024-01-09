@@ -19,19 +19,20 @@ public class App {
         while (run) {
             switch (GUI.showMenuAndReadChoose()) {
                 case "1":
+                    System.out.println("Listing all books: ");
                     GUI.listBooks(bookRepository.getBooks());
                     break;
                 case "2":
-                    
+                    System.out.println("Listing all rented books: ");
                     break;
                 case "3":
-                    
+                    System.out.println("Which book do you want to rent?: ");
                     break;
                 case "4":
-                    
+                    System.out.println("Which book are you looking for?: ");
                     break;
                 case "5":
-                    
+                    System.out.println("Insert information about new book: ");
                     break;
                 case "6":
                     run = false;
