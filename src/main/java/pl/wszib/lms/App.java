@@ -38,7 +38,7 @@ public class App {
                     run = false;
                     break;
                 default:
-                    System.out.println("Wrong choose !!");
+                    System.out.println("Wrong input!");
                     break;
             }
         }

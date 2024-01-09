@@ -16,6 +16,7 @@ public Book(String isbn, String title, String author) {
     this.isbn = isbn;
     this.title = title;
     this.author = author;
+    this.rentStatus = false;
 
 }
     public String getIsbn() {
@@ -40,8 +41,8 @@ public Book(String isbn, String title, String author) {
     }
 
     public LocalDate getLeaseStartDate() {return leaseStartDate; }
-    public void SetLeaseStartDate(LocalDate leaseStartDate) {this.leaseStartDate = leaseStartDate; }
+    public void setLeaseStartDate(LocalDate leaseStartDate) {this.leaseStartDate = leaseStartDate; }
     public LocalDate getLeaseEndDate() {return leaseEndDate; }
-    public void SetLeaseEndDate(LocalDate leaseEndDate) {this.leaseEndDate = leaseStartDate.plusWeeks(2); }
+    public void setLeaseEndDate(LocalDate leaseEndDate) {this.leaseEndDate = leaseStartDate.plusWeeks(2); }
 
 }
