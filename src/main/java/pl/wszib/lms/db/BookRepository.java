@@ -4,7 +4,7 @@ import pl.wszib.lms.model.Book;
 
 
 public class BookRepository {
-    private final Book[] books = new Book[10];
+    private final Book[] books = new Book[100];
 
     public BookRepository() {
         this.books[0] = new Book("9788304004467","Pan Tadeusz","Adam Mickiewicz");

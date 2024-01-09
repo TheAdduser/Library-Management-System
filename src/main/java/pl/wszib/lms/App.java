@@ -4,12 +4,18 @@ import pl.wszib.lms.authorization.Authenticator;
 import pl.wszib.lms.db.BookRepository;
 import pl.wszib.lms.gui.GUI;
 
+import java.util.Scanner;
+
 public class App {
     public static void main(String[] args) {
         BookRepository bookRepository = new BookRepository();
         Authenticator authenticator = new Authenticator();
         boolean run = false;
         int counter = 0;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("test: ");
+        scanner.nextLine();
 
         while (!run && counter < 3) {
             authenticator.authenticate(GUI.readAuthData());
