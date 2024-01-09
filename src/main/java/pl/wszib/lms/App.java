@@ -4,18 +4,12 @@ import pl.wszib.lms.authorization.Authenticator;
 import pl.wszib.lms.db.BookRepository;
 import pl.wszib.lms.gui.GUI;
 
-import java.util.Scanner;
-
 public class App {
     public static void main(String[] args) {
         BookRepository bookRepository = new BookRepository();
         Authenticator authenticator = new Authenticator();
         boolean run = false;
         int counter = 0;
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("test: ");
-        scanner.nextLine();
 
         while (!run && counter < 3) {
             authenticator.authenticate(GUI.readAuthData());
@@ -27,13 +21,19 @@ public class App {
                 case "1":
                     GUI.listBooks(bookRepository.getBooks());
                     break;
-/*                case "2":
-                    GUI.rentBook(bookRepository.rent(GUI.))
+                case "2":
+                    
                     break;
                 case "3":
-                    GUI.showResult(vehicleRepository.returnVehicle(GUI.readPlate()));
-                    break;*/
+                    
+                    break;
                 case "4":
+                    
+                    break;
+                case "5":
+                    
+                    break;
+                case "6":
                     run = false;
                     break;
                 default:
