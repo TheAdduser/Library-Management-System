@@ -25,8 +25,8 @@ public Book(String isbn, String title, String author, LocalDate leaseStartDate,
         this.isbn = isbn;
         this.title = title;
         this.author = author;
-        this.startDate = leaseStartDate;
-        this.endDate = leaseEndDate;
+        this.leaseStartDate = leaseStartDate;
+        this.leaseEndDate = leaseEndDate;
         this.leaseStatus = leaseStatus;
         this.bookInfo = bookInfo;
 
