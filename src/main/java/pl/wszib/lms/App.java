@@ -37,6 +37,7 @@ public class App {
                     break;
                 case "5":
                     System.out.println("Insert information about new book: \n");
+                    gui.showResult(bookRepository.addBook());
                     break;
                 case "6":
                     run = false;
