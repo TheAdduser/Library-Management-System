@@ -1,10 +1,9 @@
 package pl.wszib.lms.gui;
 
-import pl.wszib.lms.authorization.Authenticator;
 import pl.wszib.lms.model.Book;
 import pl.wszib.lms.model.User;
 
-import java.util.Collection;
+import java.util.ArrayList;
 import java.util.Scanner;
 public class GUI {
     private final static Scanner scanner = new Scanner(System.in);
@@ -20,7 +19,7 @@ public class GUI {
         return scanner.nextLine();
     }
 
-    public static void listBooks(Book[] books) {
+    public void listBooks(ArrayList<Book> books) {
     for (Book book : books) {
         System.out.println(book);
         }

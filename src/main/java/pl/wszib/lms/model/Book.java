@@ -9,7 +9,7 @@ public class Book {
     private LocalDate leaseStartDate;
     private LocalDate leaseEndDate;
     private boolean leaseStatus;
-    private String bookInfo;
+    private String usersName;
 
 public Book(String isbn, String title, String author) {
 
@@ -20,7 +20,7 @@ public Book(String isbn, String title, String author) {
 
 }
 public Book(String isbn, String title, String author, LocalDate leaseStartDate,
-    LocalDate leaseEndDate, boolean leaseStatus, String bookInfo){
+    LocalDate leaseEndDate, boolean leaseStatus, String usersName){
         
         this.isbn = isbn;
         this.title = title;
@@ -28,7 +28,7 @@ public Book(String isbn, String title, String author, LocalDate leaseStartDate,
         this.leaseStartDate = leaseStartDate;
         this.leaseEndDate = leaseEndDate;
         this.leaseStatus = leaseStatus;
-        this.bookInfo = bookInfo;
+        this.usersName = usersName;
 
 
     }
@@ -57,5 +57,29 @@ public Book(String isbn, String title, String author, LocalDate leaseStartDate,
     public void setLeaseStartDate(LocalDate leaseStartDate) {this.leaseStartDate = leaseStartDate; }
     public LocalDate getLeaseEndDate() {return leaseEndDate; }
     public void setLeaseEndDate(LocalDate leaseEndDate) {this.leaseEndDate = leaseStartDate.plusWeeks(2); }
+    public boolean getLeaseStatus() {return leaseStatus; }
+    public void setLeaseStatus(boolean leaseStatus) {this.leaseStatus = leaseStatus; }
+    public String getUsersNAme(){ return usersName; }
+    public void setUsersName(String usersName){ this.usersName = usersName; }
+
+    @Override
+    public String toString(){
+    return new StringBuilder().append("\"")
+            .append(this.getTitle())
+            .append("\", ")
+            .append(this.getAuthor())
+            .append(", ")
+            .append("ISBN No. ")
+            .append(this.getIsbn())
+            .append(" ")
+            .append(this.getLeaseStartDate() == null ? "" : this.getLeaseStartDate())
+            .append(" - ")
+            .append(this.getLeaseEndDate() == null ? "" : this.getLeaseEndDate())
+            .append(" ")
+            .append(this.getLeaseStatus() ? "is leased" : "is not leased")
+            .append(this.getUsersNAme() == null ? "": "by ")
+            .append(this.getUsersNAme() == null ? "": this.getUsersNAme())
+            .toString();
+    }
 
 }

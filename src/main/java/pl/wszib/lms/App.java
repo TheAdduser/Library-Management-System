@@ -22,7 +22,7 @@ public class App {
             switch (GUI.showMenuAndReadChoose()) {
                 case "1":
                     System.out.println("Listing all books: ");
-                    GUI.listBooks(bookRepository.getBooks());
+                    gui.listBooks(bookRepository.getBooks());
                     break;
                 case "2":
                     System.out.println("Listing all leased books: ");
