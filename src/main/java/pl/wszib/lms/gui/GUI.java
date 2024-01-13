@@ -34,7 +34,7 @@ public class GUI {
         }
     }
 
-    public static User readAuthData() {
+    public User readAuthData() {
         System.out.println("Login:");
         String login = scanner.nextLine();
         System.out.println("Password:");

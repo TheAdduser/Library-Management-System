@@ -3,17 +3,19 @@ package pl.wszib.lms;
 import pl.wszib.lms.authorization.Authenticator;
 import pl.wszib.lms.db.BookRepository;
 import pl.wszib.lms.gui.GUI;
+import pl.wszib.lms.model.User;
 
 public class App {
     public static void main(String[] args) {
         BookRepository bookRepository = new BookRepository();
         Authenticator authenticator = new Authenticator();
+        GUI gui = new GUI();
         boolean run = false;
         int counter = 0;
 
         while (!run && counter < 3) {
-            authenticator.authenticate(GUI.readAuthData());
-            run = Authenticator.loggedUser != null;
+            User user = gui.readAuthData();
+            run = authenticator.authenticate(user.getLogin(), user.getPassword());
             counter++;
         }
         while (run) {
