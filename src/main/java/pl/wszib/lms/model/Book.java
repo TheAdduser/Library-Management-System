@@ -3,7 +3,7 @@ import java.time.LocalDate;
 
 public class Book {
 
-    private String isbn;
+    private long isbn;
     private String title;
     private String author;
     private LocalDate leaseStartDate;
@@ -11,7 +11,7 @@ public class Book {
     private boolean leaseStatus;
     private String usersName;
 
-public Book(String isbn, String title, String author) {
+public Book(long isbn, String title, String author) {
 
     this.isbn = isbn;
     this.title = title;
@@ -19,7 +19,7 @@ public Book(String isbn, String title, String author) {
     this.leaseStatus = false;
 
 }
-public Book(String isbn, String title, String author, LocalDate leaseStartDate,
+public Book(long isbn, String title, String author, LocalDate leaseStartDate,
     LocalDate leaseEndDate, boolean leaseStatus, String usersName){
         
         this.isbn = isbn;
@@ -32,10 +32,10 @@ public Book(String isbn, String title, String author, LocalDate leaseStartDate,
 
 
     }
-    public String getIsbn() {
+    public long getIsbn() {
         return isbn;
     }
-    public void setIsbn(String isbn) {
+    public void setIsbn(long isbn) {
         this.isbn = isbn;
     }
 
@@ -56,11 +56,11 @@ public Book(String isbn, String title, String author, LocalDate leaseStartDate,
     public LocalDate getLeaseStartDate() {return leaseStartDate; }
     public void setLeaseStartDate(LocalDate leaseStartDate) {this.leaseStartDate = leaseStartDate; }
     public LocalDate getLeaseEndDate() {return leaseEndDate; }
-    public void setLeaseEndDate(LocalDate leaseEndDate) {this.leaseEndDate = leaseStartDate.plusWeeks(2); }
+    public void setLeaseEndDate(LocalDate leaseEndDate) {this.leaseEndDate = leaseEndDate; }
     public boolean getLeaseStatus() {return leaseStatus; }
     public void setLeaseStatus(boolean leaseStatus) {this.leaseStatus = leaseStatus; }
     public String getUsersNAme(){ return usersName; }
-    public void setUsersName(String usersName){ this.usersName = usersName; }
+    public void setUserName(String usersName){ this.usersName = usersName; }
 
     @Override
     public String toString(){
@@ -76,7 +76,7 @@ public Book(String isbn, String title, String author, LocalDate leaseStartDate,
             .append(" - ")
             .append(this.getLeaseEndDate() == null ? "" : this.getLeaseEndDate())
             .append(" ")
-            .append(this.getLeaseStatus() ? "is leased" : "is not leased")
+            .append(this.getLeaseStatus() ? "is leased " : "is not leased ")
             .append(this.getUsersNAme() == null ? "": "by ")
             .append(this.getUsersNAme() == null ? "": this.getUsersNAme())
             .toString();

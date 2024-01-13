@@ -37,6 +37,13 @@ public class GUI {
         if(counter == 0) System.out.println("All books are in the library!");
     }
 
+    public long inputIsbn(){
+        System.out.println("Enter ISBN No.");
+        long isbn = scanner.nextLong();
+        scanner.nextLine();
+        return isbn;
+    }
+
     public static void showResult(boolean result) {
         if(result) {
             System.out.println("Success !!");

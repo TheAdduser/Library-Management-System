@@ -30,6 +30,7 @@ public class App {
                     break;
                 case "3":
                     System.out.println("Which book do you want to lease?: \n");
+                    gui.showResult(bookRepository.lease(gui.inputIsbn()));
                     break;
                 case "4":
                     System.out.println("Which book are you looking for?: \n");
