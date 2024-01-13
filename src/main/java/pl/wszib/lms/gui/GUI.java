@@ -59,6 +59,20 @@ public class GUI {
         if(counter == 0) System.out.println("There are no expired books");
     }
 
+    public void searchBooks(ArrayList<Book> books){
+        int counter = 0;
+        String text = scanner.nextLine();
+        for(Book book : books){
+            if(book.getTitle().toLowerCase().contains(text.toLowerCase()) ||
+                    book.getAuthor().toLowerCase().contains(text.toLowerCase()) ||
+                    String.valueOf(book.getIsbn()).contains(text)){
+                System.out.println(book);
+                counter++;
+            }
+        }
+        if(counter == 0) System.out.println("No books found");
+    }
+
 
     public static void showResult(boolean result) {
         if(result) {

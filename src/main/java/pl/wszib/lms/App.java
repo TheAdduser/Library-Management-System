@@ -8,6 +8,9 @@ import pl.wszib.lms.model.User;
 import java.util.ArrayList;
 
 public class App {
+    //For testing purposes
+    //Login: admin
+    //Password admin123
     public static void main(String[] args) {
         BookRepository bookRepository = new BookRepository();
         Authenticator authenticator = new Authenticator();
@@ -40,6 +43,7 @@ public class App {
                     break;
                 case "5":
                     System.out.println("Which book are you looking for?: \n");
+                    gui.searchBooks(bookRepository.getBooks());
                     break;
                 case "6":
                     System.out.println("Insert information about new book: \n");
