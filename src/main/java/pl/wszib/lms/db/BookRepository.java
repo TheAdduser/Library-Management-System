@@ -2,13 +2,17 @@ package pl.wszib.lms.db;
 
 import pl.wszib.lms.model.Book;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 
 public class BookRepository {
-    private final Book[] books = new Book[100];
+    Scanner scanner = new Scanner(System.in);
+    private final ArrayList<Book> books = new ArrayList<>();
 
     public BookRepository() {
-        this.books[0] = new Book("9788304004467","Pan Tadeusz","Adam Mickiewicz");
-        this.books[1] = new Book("9782824903996","Krzyżacy", "Henryk Sienkiewicz");
+        this.books[0] = new Book("9788304004467", "Pan Tadeusz", "Adam Mickiewicz");
+        this.books[1] = new Book("9782824903996", "Krzyżacy", "Henryk Sienkiewicz");
         this.books[2] = new Book("9788373271890", "W pustyni i w puszczy", "Henryk Sienkiewicz");
         this.books[3] = new Book("9788380080666", "Chłopi", "Władysław Reymont");
         this.books[4] = new Book("9788373191724", "Lalka", "Bolesław Prus");
@@ -19,7 +23,7 @@ public class BookRepository {
         this.books[9] = new Book("9788380108574", "Solaris", "Stanisław Lem");
     }
 
-    public Book[] getBooks()    {
+    public ArrayList<Book> getBooks() {
         return books;
     }
 }
