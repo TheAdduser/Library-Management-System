@@ -21,20 +21,21 @@ public class App {
         while (run) {
             switch (GUI.showMenuAndReadChoose()) {
                 case "1":
-                    System.out.println("Listing all books: ");
+                    System.out.println("Listing all books: \n");
                     gui.listBooks(bookRepository.getBooks());
                     break;
                 case "2":
-                    System.out.println("Listing all leased books: ");
+                    System.out.println("Listing all leased books: \n");
+                    gui.listLeasedBooks(bookRepository.getBooks());
                     break;
                 case "3":
-                    System.out.println("Which book do you want to lease?: ");
+                    System.out.println("Which book do you want to lease?: \n");
                     break;
                 case "4":
-                    System.out.println("Which book are you looking for?: ");
+                    System.out.println("Which book are you looking for?: \n");
                     break;
                 case "5":
-                    System.out.println("Insert information about new book: ");
+                    System.out.println("Insert information about new book: \n");
                     break;
                 case "6":
                     run = false;
