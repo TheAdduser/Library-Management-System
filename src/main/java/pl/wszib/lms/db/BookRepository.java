@@ -35,7 +35,7 @@ public class BookRepository {
                 book.setUserName(userName);
                 book.setLeaseStatus(true);
                 book.setLeaseStartDate(LocalDate.now());
-                book.setLeaseEndDate(LocalDate.now().plusWeeks(2));
+                book.setLeaseEndDate(book.getLeaseStartDate().plusWeeks(2));
                 return true;
             }
         }
