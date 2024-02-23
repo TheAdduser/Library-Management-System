@@ -4,7 +4,11 @@ import pl.wszib.lms.authorization.Authenticator;
 import pl.wszib.lms.db.BookRepository;
 import pl.wszib.lms.gui.GUI;
 import pl.wszib.lms.model.User;
+import pl.wszib.lms.utils.DBUtil;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class App {
@@ -12,6 +16,7 @@ public class App {
     //Login: admin
     //Password admin123
     public static void main(String[] args) {
+        DBUtil.connect();
         BookRepository bookRepository = new BookRepository();
         Authenticator authenticator = new Authenticator();
         GUI gui = new GUI();
@@ -50,6 +55,7 @@ public class App {
                     gui.showResult(bookRepository.addBook());
                     break;
                 case "7":
+                    DBUtil.disconnect();
                     run = false;
                     break;
                 default:

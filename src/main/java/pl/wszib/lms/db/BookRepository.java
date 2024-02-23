@@ -11,16 +11,16 @@ public class BookRepository {
     private final ArrayList<Book> books = new ArrayList<>();
 
     public BookRepository() {
-        this.books.add(new Book(9788304004467L, "Pan Tadeusz", "Adam Mickiewicz"));
-        this.books.add(new Book(9782824903996L, "Krzyżacy", "Henryk Sienkiewicz"));
-        this.books.add(new Book(9788373271890L, "W pustyni i w puszczy", "Henryk Sienkiewicz"));
-        this.books.add(new Book(9788380080666L, "Chłopi", "Władysław Reymont"));
-        this.books.add(new Book(9788373191724L, "Lalka", "Bolesław Prus"));
-        this.books.add(new Book(9788389681111L, "Ferdydurke", "Witold Gombrowicz"));
-        this.books.add(new Book(9788389598570L, "Zbrodnia i kara", "Fiodor Dostojewski"));
-        this.books.add(new Book(9788386802546L, "Quo Vadis", "Henryk Sienkiewicz"));
-        this.books.add(new Book(9788324014251L, "Nad Niemnem", "Eliza Orzeszkowa"));
-        this.books.add(new Book(9788380108574L, "Solaris", "Stanisław Lem"));
+        this.books.add(new Book(1,9788304004467L, "Pan Tadeusz", "Adam Mickiewicz"));
+        this.books.add(new Book(2,9782824903996L, "Krzyżacy", "Henryk Sienkiewicz"));
+        this.books.add(new Book(3,9788373271890L, "W pustyni i w puszczy", "Henryk Sienkiewicz"));
+        this.books.add(new Book(4,9788380080666L, "Chłopi", "Władysław Reymont"));
+        this.books.add(new Book(5,9788373191724L, "Lalka", "Bolesław Prus"));
+        this.books.add(new Book(6,9788389681111L, "Ferdydurke", "Witold Gombrowicz"));
+        this.books.add(new Book(7,9788389598570L, "Zbrodnia i kara", "Fiodor Dostojewski"));
+        this.books.add(new Book(8,9788386802546L, "Quo Vadis", "Henryk Sienkiewicz"));
+        this.books.add(new Book(9,9788324014251L, "Nad Niemnem", "Eliza Orzeszkowa"));
+        this.books.add(new Book(10,9788380108574L, "Solaris", "Stanisław Lem"));
     }
 
     public ArrayList<Book> getBooks() {

@@ -3,6 +3,7 @@ import java.time.LocalDate;
 
 public class Book {
 
+    private int id;
     private long isbn;
     private String title;
     private String author;
@@ -19,9 +20,33 @@ public Book(long isbn, String title, String author) {
     this.leaseStatus = false;
 
 }
+    public Book(int id,long isbn, String title, String author) {
+
+        this.id = id;
+        this.isbn = isbn;
+        this.title = title;
+        this.author = author;
+        this.leaseStatus = false;
+
+    }
 public Book(long isbn, String title, String author, LocalDate leaseStartDate,
     LocalDate leaseEndDate, boolean leaseStatus, String usersName){
         
+        this.isbn = isbn;
+        this.title = title;
+        this.author = author;
+        this.leaseStartDate = leaseStartDate;
+        this.leaseEndDate = leaseEndDate;
+        this.leaseStatus = leaseStatus;
+        this.usersName = usersName;
+
+
+    }
+
+    public Book(int id,long isbn, String title, String author, LocalDate leaseStartDate,
+                LocalDate leaseEndDate, boolean leaseStatus, String usersName){
+
+        this.id = id;
         this.isbn = isbn;
         this.title = title;
         this.author = author;
