@@ -12,6 +12,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class App {
+    public static Connection connection;
+
     //For testing purposes
     //Login: admin
     //Password admin123

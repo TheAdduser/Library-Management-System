@@ -82,11 +82,12 @@ public class GUI {
         }
     }
 
-//    public User readAuthData() {
-//        System.out.println("Login:");
-//        String login = scanner.nextLine();
-//        System.out.println("Password:");
-//        return new User(login, scanner.nextLine());
-//    }
+
+    public User readAuthData() {
+        System.out.println("Login:");
+        String login = scanner.nextLine();
+        System.out.println("Password:");
+        return new User(login, scanner.nextLine());
+    }
 }
 
