@@ -18,7 +18,7 @@ public class UserRepository {
 
     public User getByLogin(String login) {
             try {
-                String sql = "Select* FROM WHERE login = ?";
+                String sql = "SELECT * FROM tuser WHERE login = ?";
                 PreparedStatement preparedStatement = App.connection.prepareStatement(sql);
 
                 preparedStatement.setString(1,login);
