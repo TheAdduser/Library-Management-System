@@ -80,6 +80,8 @@ public class BookRepository {
             }
             preparedStatement.setBoolean(6, book.getLeaseStatus());
             preparedStatement.setString(7, book.getUsersName());
+
+            preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
