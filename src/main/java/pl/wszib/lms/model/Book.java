@@ -84,7 +84,7 @@ public Book(long isbn, String title, String author, LocalDate leaseStartDate,
     public void setLeaseEndDate(LocalDate leaseEndDate) {this.leaseEndDate = leaseEndDate; }
     public boolean getLeaseStatus() {return leaseStatus; }
     public void setLeaseStatus(boolean leaseStatus) {this.leaseStatus = leaseStatus; }
-    public String getUsersNAme(){ return usersName; }
+    public String getUsersName(){ return usersName; }
     public void setUserName(String usersName){ this.usersName = usersName; }
 
     @Override
@@ -102,8 +102,8 @@ public Book(long isbn, String title, String author, LocalDate leaseStartDate,
             .append(this.getLeaseEndDate() == null ? "" : this.getLeaseEndDate())
             .append(" ")
             .append(this.getLeaseStatus() ? "is leased " : "is not leased ")
-            .append(this.getUsersNAme() == null ? "": "by ")
-            .append(this.getUsersNAme() == null ? "": this.getUsersNAme())
+            .append(this.getUsersName() == null ? "": "by ")
+            .append(this.getUsersName() == null ? "": this.getUsersName())
             .toString();
     }
 
