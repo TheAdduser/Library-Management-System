@@ -34,7 +34,7 @@ public class App {
             switch (GUI.showMenuAndReadChoose()) {
                 case "1":
                     System.out.println("Listing all books: \n");
-                    gui.listBooks(bookRepository.getBooks());
+                    gui.listBooks(bookRepository.getBooksFromDB());
                     break;
                 case "2":
                     System.out.println("Listing all leased books: \n");

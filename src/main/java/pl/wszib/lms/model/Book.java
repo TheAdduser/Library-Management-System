@@ -1,8 +1,11 @@
 package pl.wszib.lms.model;
+import lombok.Getter;
+
 import java.time.LocalDate;
 
 public class Book {
 
+    @Getter
     private int id;
     private long isbn;
     private String title;
@@ -12,26 +15,29 @@ public class Book {
     private boolean leaseStatus;
     private String usersName;
 
-public Book(long isbn, String title, String author) {
+    public Book(long isbn, String title, String author) {
 
-    this.isbn = isbn;
-    this.title = title;
-    this.author = author;
-    this.leaseStatus = false;
-
-}
-    public Book(int id,long isbn, String title, String author) {
-
-        this.id = id;
         this.isbn = isbn;
         this.title = title;
         this.author = author;
         this.leaseStatus = false;
 
     }
+    public Book(int id,long isbn, String title, String author) {
+
+        this.isbn = isbn;
+        this.title = title;
+        this.author = author;
+        this.leaseStartDate = leaseStartDate;
+        this.leaseEndDate = leaseEndDate;
+        this.leaseStatus = false;
+        this.usersName = usersName;
+
+    }
 public Book(long isbn, String title, String author, LocalDate leaseStartDate,
     LocalDate leaseEndDate, boolean leaseStatus, String usersName){
         
+        this.id = id;
         this.isbn = isbn;
         this.title = title;
         this.author = author;
@@ -54,9 +60,12 @@ public Book(long isbn, String title, String author, LocalDate leaseStartDate,
         this.leaseEndDate = leaseEndDate;
         this.leaseStatus = leaseStatus;
         this.usersName = usersName;
-
-
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public long getIsbn() {
         return isbn;
     }
