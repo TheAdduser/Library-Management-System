@@ -38,11 +38,11 @@ public class App {
                     break;
                 case "2":
                     System.out.println("Listing all leased books: \n");
-                    gui.listLeasedBooks(bookRepository.getBooks());
+                    gui.listLeasedBooks(bookRepository.getBooksFromDB());
                     break;
                 case "3":
                     System.out.println("Listing expired leases: \n");
-                    gui.listExpiredBooks(bookRepository.getBooks());
+                    gui.listExpiredBooks(bookRepository.getBooksFromDB());
                         break;
                 case "4":
                     System.out.println("Which book do you want to lease?: \n");

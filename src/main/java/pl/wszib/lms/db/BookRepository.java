@@ -1,6 +1,6 @@
 package pl.wszib.lms.db;
 
-import jdk.internal.org.objectweb.asm.tree.TryCatchBlockNode;
+import lombok.Getter;
 import pl.wszib.lms.App;
 import pl.wszib.lms.Test;
 import pl.wszib.lms.model.Book;
@@ -14,15 +14,13 @@ import java.util.Scanner;
 
 public class BookRepository {
     Scanner scanner = new Scanner(System.in);
+    @Getter
     private final ArrayList<Book> books = new ArrayList<>();
 
     public BookRepository(List<Book> books) {
         this.books.addAll(books);
     }
-
-    public ArrayList<Book> getBooks() {
-        return books;
-    }
+    public BookRepository(){};
 
     public ArrayList<Book> getBooksFromDB() {
         ArrayList<Book> result = new ArrayList<>();
@@ -51,7 +49,7 @@ public class BookRepository {
         return result;
     }
 
-    public boolean rent(long isbn){
+    public boolean lease(long isbn){
         try{
             String sql = "SELECT * FROM tbook WHERE isbn = ?";
             PreparedStatement preparedStatement = App.connection.prepareStatement(sql);

@@ -62,6 +62,8 @@ public Book(long isbn, String title, String author, LocalDate leaseStartDate,
         this.usersName = usersName;
     }
 
+    public Book(){};
+
     public void setId(int id) {
         this.id = id;
     }
