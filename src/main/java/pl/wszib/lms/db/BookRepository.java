@@ -13,14 +13,48 @@ import java.util.List;
 import java.util.Scanner;
 
 public class BookRepository {
-    Scanner scanner = new Scanner(System.in);
     @Getter
     private final ArrayList<Book> books = new ArrayList<>();
+    Scanner scanner = new Scanner(System.in);
+    public BookRepository(){
+        this.books.add(new Book(1234,"TestLeasedBook", "Test Author",
+                LocalDate.now(),
+                LocalDate.now().plusWeeks(2),true,"Test User"));
+        this.books.add(new Book(5678,"TestBook", "Test Author 2"));
+    }
+
 
     public BookRepository(List<Book> books) {
         this.books.addAll(books);
     }
-    public BookRepository(){};
+
+    public boolean testLeaseBook(long isbn){
+        for(Book book : this.books){
+            if(book.getIsbn() == isbn && !book.getLeaseStatus()){
+                book.setLeaseStatus(true);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean testAddBook(long isbn,String title, String author){
+        Book newBook = new Book(isbn, title, author);
+        return books.contains(newBook);
+    }
+
+    public boolean testReturnBook(long isbn){
+        for(Book book : this.books){
+            if(book.getIsbn() == isbn && book.getLeaseStatus()){
+                book.setLeaseStatus(false);
+                book.setUserName(null);
+                book.setLeaseStartDate(null);
+                book.setLeaseEndDate(null);
+                return true;
+            }
+        }
+        return false;
+    }
 
     public ArrayList<Book> getBooksFromDB() {
         ArrayList<Book> result = new ArrayList<>();
