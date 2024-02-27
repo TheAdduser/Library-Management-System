@@ -2,7 +2,6 @@ package pl.wszib.lms.db;
 
 import lombok.Getter;
 import pl.wszib.lms.App;
-import pl.wszib.lms.Test;
 import pl.wszib.lms.model.Book;
 
 import java.sql.Date;
@@ -20,7 +19,7 @@ public class BookRepository {
         this.books.add(new Book(1234,"TestLeasedBook", "Test Author",
                 LocalDate.now(),
                 LocalDate.now().plusWeeks(2),true,"Test User"));
-        this.books.add(new Book(5678,"TestBook", "Test Author 2"));
+        this.books.add(new Book(1234,"TestBook", "Test Author 2"));
     }
 
 
