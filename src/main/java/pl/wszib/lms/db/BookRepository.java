@@ -88,7 +88,7 @@ public class BookRepository {
 
             ResultSet rs = preparedStatement.executeQuery();
             if(rs.next()){
-                boolean lease = rs.getBoolean("lease");
+                boolean lease = rs.getBoolean("leaseStatus");
                 if(lease){
                     int id = rs.getInt("id");
                     String updateSql = "UPDATE tbook SET leaseStatus = ?, usersName = ?, leaseStartDate = ?, leaseEndDate = ? WHERE id = ?";
