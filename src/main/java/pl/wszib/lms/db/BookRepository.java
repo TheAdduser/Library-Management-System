@@ -57,7 +57,7 @@ public class BookRepository {
 
             ResultSet rs = preparedStatement.executeQuery();
             if(rs.next()){
-                boolean lease = rs.getBoolean("lease");
+                boolean lease = rs.getBoolean("leaseStatus");
                 if(!lease){
                     System.out.println("Enter your name: ");
                     String usersName = scanner.nextLine();

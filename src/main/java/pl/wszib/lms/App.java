@@ -57,6 +57,9 @@ public class App {
                     gui.showResult(bookRepository.addBook());
                     break;
                 case "7":
+                    System.out.println("Which book do you want to return?: \n");
+                    gui.showResult(bookRepository.returnBook(gui.inputIsbn()));
+                case "8":
                     DBUtil.disconnect();
                     run = false;
                     break;
